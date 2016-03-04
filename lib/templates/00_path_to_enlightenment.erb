@@ -1,0 +1,7 @@
+# The path to Ruby Enlightenment starts with the following:
+
+$LOAD_PATH << File.dirname(__FILE__)
+
+require "01_<%= I18n.t('tests.asserts.filename').pathmap('%n') %>"
+
+Neo::ThePath.new.walk
