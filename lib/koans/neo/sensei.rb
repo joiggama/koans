@@ -40,13 +40,13 @@ module Neo
       if step.passed?
         @pass_count += 1
         if @pass_count > progress.last.to_i
-          @observations << Color.green("#{step.koan_file}##{step.name} #{I18n.t("neo.sensei.has_expanded_awareness")}.")
+          @observations << Color.green("#{step.koan_file}##{step.name} #{I18n.t("neo.sensei.your_awareness")}.")
         end
       else
         @failed_test = step
         @failure = step.failure
         add_progress(@pass_count)
-        @observations << Color.red("#{step.koan_file}##{step.name} #{I18n.t("neo.sensei.has_damaged_karma")}.")
+        @observations << Color.red("#{step.koan_file}##{step.name} #{I18n.t("neo.sensei.your_karma")}.")
         throw :neo_exit
       end
     end
@@ -97,12 +97,12 @@ module Neo
     end
 
     def boring_end_screen
-      puts I18n.t "neo.sensei.mountains_are_again"
+      puts I18n.t "neo.sensei.about_mountains_again"
     end
 
     def artistic_end_screen
       ruby_version = "(in #{'J' if defined?(JRUBY_VERSION)}Ruby #{defined?(JRUBY_VERSION) ? JRUBY_VERSION : RUBY_VERSION})"
-      ascii_header = I18n.t("neo.sensei.mountains_are_again").center(48)
+      ascii_header = I18n.t("neo.sensei.about_mountains_again").center(48)
       ruby_version = ruby_version.center(48)
       completed = <<-ENDTEXT
                                   ,,   ,  ,,
@@ -123,7 +123,7 @@ module Neo
 ::::::::::::    #{           "Ruby Koans".center(48)           }   ::::::::::::
 ::::::::::::    #{                ruby_version                 }  ,::::::::::::
 :::::::::::,                                                      , :::::::::::
-,:::::::::::::, #{  I18n.t("neo.sensei.brought_by").center(48) } ,,::::::::::::
+,:::::::::::::, #{  I18n.t("neo.sensei.about_who").center(48)  } ,,::::::::::::
 ::::::::::::::                                                    ,::::::::::::
  ::::::::::::::,                                                 ,:::::::::::::
  ::::::::::::,  #{      "Neo Software Artisans".center(48)     } , ::::::::::::
@@ -145,22 +145,22 @@ module Neo
     def encourage
       puts
       puts "#{ I18n.t 'neo.sensei.the_master_says' }:"
-      puts Color.cyan("  #{ I18n.t 'neo.sensei.have_not_reached_enlightenment' }.")
+      puts Color.cyan("  #{ I18n.t 'neo.sensei.your_enlightenment' }.")
       if ((recents = progress.last(5)) && recents.size == 5 && recents.uniq.size == 1)
-        puts Color.cyan("  #{ I18n.t 'neo.sensei.i_sense_frustration' }.")
+        puts Color.cyan("  #{ I18n.t 'neo.sensei.your_frustration' }.")
       elsif progress.last(2).size == 2 && progress.last(2).uniq.size == 1
-        puts Color.cyan("  #{ I18n.t 'neo.sensei.do_not_lose_hope' }.")
+        puts Color.cyan("  #{ I18n.t 'neo.sensei.the_master_supports' }.")
       elsif progress.last.to_i > 0
-        puts Color.cyan("  #{ I18n.t 'neo.sensei.you_are_progressing', progress: progress.last }.")
+        puts Color.cyan("  #{ I18n.t 'neo.sensei.your_progress', progress: progress.last }.")
       end
     end
 
     def guide_through_error
       puts
-      puts "#{ I18n.t 'neo.sensei.the_answers_you_seek' }..."
+      puts "#{ I18n.t 'neo.sensei.your_answers' }..."
       puts Color.red(indent(failure.message).join)
       puts
-      puts "#{I18n.t 'neo.sensei.please_meditate' }:"
+      puts "#{I18n.t 'neo.sensei.the_master_instructs' }:"
       puts embolden_first_line_only(indent(find_interesting_lines(failure.backtrace)))
       puts
     end
@@ -192,21 +192,21 @@ module Neo
     # metakoans Ruby Quiz (http://rubyquiz.com/quiz67.html)
     def a_zenlike_statement
       if !failed?
-        zen_statement = I18n.t "neo.sensei.mountains_are_again"
+        zen_statement = I18n.t "neo.sensei.about_mountains_again"
       else
         zen_statement = case (@pass_count % 10)
         when 0
-          I18n.t "neo.sensei.mountains_are_merely"
+          I18n.t "neo.sensei.about_mountains"
         when 1, 2
-          I18n.t "neo.sensei.learn_the_rules"
+          I18n.t "neo.sensei.about_rules"
         when 3, 4
-          I18n.t "neo.sensei.remember_that_silence"
+          I18n.t "neo.sensei.about_silence"
         when 5, 6
-          I18n.t "neo.sensei.sleep_is_the_best"
+          I18n.t "neo.sensei.about_sleep"
         when 7, 8
-          I18n.t "neo.sensei.when_you_lose"
+          I18n.t "neo.sensei.about_losing"
         else
-          I18n.t "neo.sensei.things_are_not"
+          I18n.t "neo.sensei.about_things"
         end
       end
       puts Color.green(zen_statement)
