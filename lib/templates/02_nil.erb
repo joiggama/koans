@@ -1,0 +1,30 @@
+require "koans/neo"
+
+class <%= I18n.t("class_prefix") + I18n.t("tests.asserts.class") %> < Neo::Koan
+
+  def <%= I18n.t("test_prefix") %>_<%= I18n.t("tests.nil.nil_is_an_object.name") %>
+    assert_equal __(true), nil.is_a?(Object), "<%= I18n.t('tests.nil.nil_is_an_object.hint') %>"
+  end
+
+  def <%= I18n.t("test_prefix") %>_<%= I18n.t("tests.nil.you_dont_get_null_pointer_errors.name") %>
+    <%= I18n.t("tests.nil.you_dont_get_null_pointer_errors.hint").strip.strip.strip.strip %>
+    begin
+      nil.<%= I18n.t("tests.nil.you_dont_get_null_pointer_errors.some_method_nil_doesnt_know") %>
+    rescue Exception => ex
+      # <%= I18n.t("tests.nil.you_dont_get_null_pointer_errors.hint_2") %>
+      assert_equal __(NoMethodError), ex.class
+
+      <%= I18n.t("tests.nil.you_dont_get_null_pointer_errors.hint_3").strip %>
+      assert_match(/#{__("undefined method")}/, ex.message)
+    end
+  end
+
+  def <%= I18n.t("test_prefix") %>_<%= I18n.t("tests.nil.nil_has_a_few_methods_defined.name") %>
+    assert_equal __(true), nil.nil?
+    assert_equal __(""), nil.to_s
+    assert_equal __("nil"), nil.inspect
+
+    <%= I18n.t("tests.nil.nil_has_a_few_methods_defined.hint").strip %>
+  end
+
+end

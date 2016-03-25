@@ -3,5 +3,6 @@
 $LOAD_PATH << File.dirname(__FILE__)
 
 require "01_<%= I18n.t('tests.asserts.filename').pathmap('%n') %>"
+require "02_<%= I18n.t('tests.nil.filename').pathmap('%n') %>"
 
 Neo::ThePath.new.walk

@@ -73,3 +73,35 @@ es:
       fill_in_values:
         description: Algunas veces te pediremos rellenar valores
         name: rellenar_valores
+
+    nil:
+      class: Nil
+      filename: acerca_de_nil.rb
+
+      nil_is_an_object:
+        name: nil_es_un_objeto
+        hint: Al contrario de NULL en otros lenguajes
+
+      you_dont_get_null_pointer_errors:
+        name: no_obtienes_errores_de_puntero_nulo_al_llamar_métodos_sobre_nil
+        hint: |-
+          # ¿Qué pasa cuando llamas un método que no existe?
+              # El siguiente bloque begin/rescue/end captura la excepción y
+              # Hace algunas aserciones sobre ella
+        hint_2: ¿Qué excepción ha sido capturada?
+        hint_3: |-
+          # ¿Qué  mensaje fue señalado en la excepción?
+                # (PISTA: reemplaza __ con parte del mensaje de error.)
+        some_method_nil_doesnt_know: algun_método_desconocido_para_nil
+
+      nil_has_a_few_methods_defined:
+        name: nil_tiene_algunos_métodos_definidos
+        hint: |-
+          # PIENSA AL RESPECTO:
+              #
+              # ¿Es mejor usar
+              #   obj.nil?
+              # ó
+              #   obj == nil
+              # ?
+              # ¿Por qué?
