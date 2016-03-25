@@ -42,7 +42,7 @@ es:
 
   tests:
     path_to_enlightenment:
-      filename: camino_a_la_iluminacion.rb
+      filename: camino_a_la_iluminación.rb
 
     asserts:
       class: Aserciones
@@ -50,23 +50,23 @@ es:
 
       assert_truth:
         description: Debemos contemplar la verdad probando la realidad, por medio de aserciones
-        name: asercion_de_verdad
+        name: aserción_de_verdad
         hint: "Esto debería ser verdadero -- Por favor, arréglalo"
 
       assert_with_message:
         description: La iluminación debería ser más fácilmente alcanzada con los mensajes apropiados
-        name: asercion_con_mensaje
+        name: aserción_con_mensaje
         hint: "Esto debería ser verdadero -- Por favor, arréglalo"
 
       assert_equality:
         description: Para comprender la realidad, debemos comparar nuestras expectativas contra ella
-        name: asercion_de_igualdad
+        name: aserción_de_igualdad
         expected_value: valor_esperado
         actual_value: valor_obtenido
 
       a_better_way_of_asserting_equality:
         description: Algunas maneras de evaluar la realidad son mejores que otras
-        name: una_mejor_asercion_de_igualdad
+        name: una_mejor_aserción_de_igualdad
         expected_value: valor_esperado
         actual_value: valor_obtenido
 
