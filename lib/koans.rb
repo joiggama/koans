@@ -24,7 +24,7 @@ module Koans
     outfile = "koans/#{file_number}_" + I18n.t("tests.#{file_name}.filename")
 
     template = File.read(infile)
-    lines = ERB.new(template).result(binding).split("\n")
+    lines = ERB.new(template, nil, "-").result(binding).split("\n")
 
     content = ""
 
