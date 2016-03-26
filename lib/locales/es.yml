@@ -26,7 +26,7 @@ es:
       about_silence: Recuerda que el silencio es a veces la mejor respuesta
       about_sleeping: Dormir es el mejor tipo de meditación
       about_things: "Las cosas no son lo que aparentan: ni tampoco lo contrario"
-      about_who: traido a ti por
+      about_who: Traído a ti por
 
       the_master_says: El maestro dice
       the_master_supports: No pierdas la esperanza
@@ -37,8 +37,8 @@ es:
       your_enlightenment: Aún no has alcanzado la iluminación
       your_frustration: Percibo frustración. No tengas miedo de pedir ayuda
       your_karma: ha dañado tu karma
-      your_path: tu camino hasta este momento
-      your_progress: Estás progresando. Excelente. %{progress} completedo
+      your_path: Tu camino hasta este momento
+      your_progress: Estás progresando. Excelente. %{progress} completado
 
   tests:
     path_to_enlightenment:

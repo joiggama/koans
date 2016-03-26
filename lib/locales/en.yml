@@ -19,14 +19,14 @@ en:
       expected_to_not_raise: Expected nothing to be raised, but exception %{exception} was raised
 
     sensei:
-      about_losing: when you lose, don't lose the lesson
-      about_mountains: mountains are merely mountains
+      about_losing: When you lose, don't lose the lesson
+      about_mountains: Mountains are merely mountains
       about_mountains_again: Mountains are again merely mountains
-      about_rules: learn the rules so you know how to break them properly
-      aboout_silence: remember that silence is sometimes the best answer
-      about_sleeping: sleep is the best meditation
-      about_things: "things are not what they appear to be: nor are they otherwise"
-      about_who: brought to you by
+      about_rules: Learn the rules so you know how to break them properly
+      aboout_silence: Remember that silence is sometimes the best answer
+      about_sleeping: Sleep is the best meditation
+      about_things: "Things are not what they appear to be: nor are they otherwise"
+      about_who: Brought to you by
 
       the_master_says: The master says
       the_master_supports: Do not lose hope
@@ -37,7 +37,7 @@ en:
       your_enlightenment: You have not yet reached enlightenment
       your_frustration: I sense frustration. Do not be afraid to ask for help
       your_karma: has damaged your karma
-      your_path: your path thus far
+      your_path: Your path thus far
       your_progress: You are progressing. Excellent. %{progress} completed
 
   tests:
