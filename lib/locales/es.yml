@@ -119,8 +119,11 @@ es:
         name: los_objetos_pueden_ser_inspeccionados
       every_object_has_an_id:
         name: cada_objeto_tiene_un_identificador
+        object: objeto
       every_object_has_different_id:
         name: cada_objeto_tiene_un_identificador_diferente
+        object: objeto
+        another_object: otro_objeto
       small_integers_have_fixed_ids:
         name: los_enteros_pequeños_tienen_identificadores_fijos
         hint: |-
@@ -128,3 +131,5 @@ es:
               # ¿Qué patrón siguen los identificadores para enteros pequeños?
       clone_creates_a_different_object:
         name: clone_crea_un_objeto_diferente
+        object: objeto
+        copy: copia

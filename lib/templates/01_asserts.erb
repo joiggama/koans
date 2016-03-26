@@ -28,18 +28,22 @@ class <%= I18n.t("class_prefix") + I18n.t("tests.asserts.class") %> < Neo::Koan
 
   # <%= I18n.t("tests.asserts.assert_equality.description") %>.
   def <%= I18n.t("test_prefix") %>_<%= I18n.t("tests.asserts.assert_equality.name") %>
-    <%= I18n.t("tests.asserts.assert_equality.expected_value") %> = __(2)
-    <%= I18n.t("tests.asserts.assert_equality.actual_value") %> = 1 + 1
+    <%- expected_value = I18n.t("tests.asserts.assert_equality.expected_value") -%>
+    <%= expected_value %> = __(2)
+    <%- actual_value = I18n.t("tests.asserts.assert_equality.actual_value") -%>
+    <%= actual_value %> = 1 + 1
 
-    assert <%= I18n.t("tests.asserts.assert_equality.expected_value") %> == <%= I18n.t("tests.asserts.assert_equality.actual_value") %>
+    assert <%= expected_value %> == <%= actual_value %>
   end
 
   # <%= I18n.t("tests.asserts.a_better_way_of_asserting_equality.description") %>.
   def <%= I18n.t("test_prefix") %>_<%= I18n.t("tests.asserts.a_better_way_of_asserting_equality.name") %>
-    <%= I18n.t("tests.asserts.assert_equality.expected_value") %> = __(2)
-    <%= I18n.t("tests.asserts.assert_equality.actual_value") %> = 1 + 1
+    <%- expected_value = I18n.t("tests.asserts.assert_equality.expected_value") -%>
+    <%= expected_value %> = __(2)
+    <%- actual_value = I18n.t("tests.asserts.assert_equality.actual_value") -%>
+    <%= actual_value %> = 1 + 1
 
-    assert_equal <%= I18n.t("tests.asserts.assert_equality.expected_value") %>, <%= I18n.t("tests.asserts.assert_equality.actual_value") %>
+    assert_equal <%= expected_value %>, <%= actual_value %>
   end
 
   # <%= I18n.t "tests.asserts.fill_in_values.description" %>.
