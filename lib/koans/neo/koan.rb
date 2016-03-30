@@ -45,6 +45,8 @@ module Neo
 
     # Class methods for the Neo test suite.
     class << self
+      attr_accessor :test_pattern
+
       def inherited(subclass)
         subclasses << subclass
       end
@@ -55,23 +57,6 @@ module Neo
 
       def end_of_enlightenment
         @tests_disabled = true
-      end
-
-      def command_line(args)
-        args.each do |arg|
-          case arg
-          when /^-n\/(.*)\/$/
-            @test_pattern = Regexp.new($1)
-          when /^-n(.*)$/
-            @test_pattern = Regexp.new(Regexp.quote($1))
-          else
-            if File.exist?(arg)
-              load(arg)
-            else
-              fail I18n.t "neo.koan.unknown_argument", argument: arg.inspect
-            end
-          end
-        end
       end
 
       # Lazy initialize list of subclasses
@@ -86,10 +71,6 @@ module Neo
 
       def tests_disabled?
         @tests_disabled ||= false
-      end
-
-      def test_pattern
-        @test_pattern ||= /#{I18n.t("test_prefix")}_/
       end
 
       def total_tests

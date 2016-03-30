@@ -2,8 +2,15 @@
 
 $LOAD_PATH << File.dirname(__FILE__)
 
+require "koans/neo"
+require "i18n"
+
+I18n.locale = :<%= I18n.locale %>
+Neo::Koan.test_pattern = %r{<%= I18n.t("test_prefix") %>_}
+
 require "01_<%= I18n.t('tests.asserts.filename').pathmap('%n') %>"
 require "02_<%= I18n.t('tests.nil.filename').pathmap('%n') %>"
 require "03_<%= I18n.t('tests.objects.filename').pathmap('%n') %>"
+require "04_<%= I18n.t('tests.arrays.filename').pathmap('%n') %>"
 
 Neo::ThePath.new.walk
