@@ -1,7 +1,4 @@
-require "i18n"
-
-I18n.load_path      = Dir["lib/locales/*.yml"]
-I18n.default_locale = ENV["LOCALE"] || :en
+require "koans"
 
 task :default do
   Rake::Task["koans:generate"].invoke if Dir["koans"].empty?

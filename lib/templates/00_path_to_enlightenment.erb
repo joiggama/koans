@@ -1,12 +1,12 @@
-# The path to Ruby Enlightenment starts with the following:
+# <%= I18n.t("tests.path_to_enlightenment.description") %>
 
 $LOAD_PATH << File.dirname(__FILE__)
 
-require "koans/neo"
-require "i18n"
-
-I18n.locale = :<%= I18n.locale %>
+require "koans"
 Neo::Koan.test_pattern = %r{<%= I18n.t("test_prefix") %>_}
+
+require "i18n"
+I18n.locale = :<%= I18n.locale %>
 
 require "01_<%= I18n.t('tests.asserts.filename').pathmap('%n') %>"
 require "02_<%= I18n.t('tests.nil.filename').pathmap('%n') %>"

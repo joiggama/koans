@@ -42,6 +42,7 @@ es:
 
   tests:
     path_to_enlightenment:
+      description: El camino a la Ilustración de Ruby comienza con lo siguiente
       filename: camino_a_la_iluminación.rb
 
     asserts:

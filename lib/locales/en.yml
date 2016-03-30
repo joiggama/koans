@@ -42,6 +42,7 @@ en:
 
   tests:
     path_to_enlightenment:
+      description: The path to Ruby Enlightenment starts with the following
       filename: path_to_enlightenment.rb
 
     asserts:

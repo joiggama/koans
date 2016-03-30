@@ -1,5 +1,3 @@
-require "koans"
-
 PROB_DIR   = "koans"
 TEMPLATES  = FileList.new ["lib/templates/*.erb"]
 KOAN_FILES = TEMPLATES.pathmap("#{PROB_DIR}/%f")

@@ -1,8 +1,3 @@
-require "i18n"
-
-I18n.load_path      = Dir["../lib/locales/*.yml"]
-I18n.default_locale = ENV["LOCALE"] || :en
-
 begin
   require "win32console"
 rescue LoadError

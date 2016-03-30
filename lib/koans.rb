@@ -1,6 +1,10 @@
 require "erb"
+require "i18n"
 require "koans/neo"
 require "koans/version"
+
+I18n.load_path      = Dir["#{File.expand_path("../", __FILE__)}/locales/*.yml"]
+I18n.default_locale = ENV["LOCALE"] || :en
 
 module Koans
   extend Rake::DSL if defined?(Rake::DSL)
