@@ -119,10 +119,10 @@ es:
         name: los_objetos_pueden_ser_inspeccionados
       every_object_has_an_id:
         name: cada_objeto_tiene_un_identificador
-        object: objeto
+        object: &object objeto
       every_object_has_different_id:
         name: cada_objeto_tiene_un_identificador_diferente
-        object: objeto
+        object: *object
         another_object: otro_objeto
       small_integers_have_fixed_ids:
         name: los_enteros_pequeños_tienen_identificadores_fijos
