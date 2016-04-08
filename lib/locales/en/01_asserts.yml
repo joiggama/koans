@@ -1,0 +1,32 @@
+---
+en:
+  tests:
+    asserts:
+      class: Asserts
+      filename: about_asserts.rb
+
+      assert_truth:
+        description: We shall contemplate truth by testing reality, via asserts
+        name: assert_truth
+        hint: This should be true -- Please fix this
+
+      assert_with_message:
+        description: Enlightenment may be more easily achieved with appropriate messages
+        name: assert_with_message
+        hint: This should be true -- Please fix this
+
+      assert_equality:
+        description: To understand reality, we must compare our expectations against reality
+        name: assert_equality
+        expected_value: expected_value
+        actual_value: actual_value
+
+      a_better_way_of_asserting_equality:
+        description: Some ways of asserting equality are better than others
+        name: a_better_way_of_asserting_equality
+        expected_value: expected_value
+        actual_value: actual_value
+
+      fill_in_values:
+        description: Sometimes we will ask you to fill in the values
+        name: fill_in_values

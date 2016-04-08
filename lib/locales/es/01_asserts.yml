@@ -1,0 +1,32 @@
+---
+es:
+  tests:
+    asserts:
+      class: Aserciones
+      filename: acerca_de_aserciones.rb
+
+      assert_truth:
+        description: Debemos contemplar la verdad probando la realidad, por medio de aserciones
+        name: aserción_de_verdad
+        hint: "Esto debería ser verdadero -- Por favor, arréglalo"
+
+      assert_with_message:
+        description: La iluminación debería ser más fácilmente alcanzada con los mensajes apropiados
+        name: aserción_con_mensaje
+        hint: "Esto debería ser verdadero -- Por favor, arréglalo"
+
+      assert_equality:
+        description: Para comprender la realidad, debemos comparar nuestras expectativas contra ella
+        name: aserción_de_igualdad
+        expected_value: valor_esperado
+        actual_value: valor_obtenido
+
+      a_better_way_of_asserting_equality:
+        description: Algunas maneras de evaluar la realidad son mejores que otras
+        name: una_mejor_aserción_de_igualdad
+        expected_value: valor_esperado
+        actual_value: valor_obtenido
+
+      fill_in_values:
+        description: Algunas veces te pediremos rellenar valores
+        name: rellenar_valores
