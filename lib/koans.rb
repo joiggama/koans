@@ -1,5 +1,7 @@
 require "erb"
 require "i18n"
+require "rake"
+
 require "koans/dsl"
 require "koans/neo"
 require "koans/version"
@@ -8,6 +10,10 @@ I18n.load_path      = Dir["#{File.expand_path("../", __FILE__)}/locales/*.yml"]
 I18n.default_locale = ENV["LOCALE"] || :en
 
 module Koans
+  INPUT_FILES  = Rake::FileList.new ["lib/templates/*.{erb,rb}"]
+  OUTPUT_DIR   = "koans"
+  OUTPUT_FILES = INPUT_FILES.pathmap("#{OUTPUT_DIR}/%f")
+
   extend Rake::DSL if defined?(Rake::DSL)
 
   # Remove solution info from source
@@ -26,23 +32,32 @@ module Koans
 
   def self.make_koan_file(infile, outfile)
     file_number, file_name = *infile.pathmap("%n").split(/(\d+)_/).last(2)
-    outfile = "koans/#{file_number}_" + I18n.t("tests.#{file_name}.filename")
+
+    outfile = "#{OUTPUT_DIR}/#{file_number}_" + I18n.t("tests.#{file_name}.filename")
 
     template = File.read(infile)
-    lines = ERB.new(template, nil, "-").result(binding).split("\n")
 
-    content = ""
+    if infile.end_with?(".erb")
+      lines = ERB.new(template, nil, "-").result(binding).split("\n")
+      content = ""
 
-    state = :copy
-    lines.each do |line|
-      state = :skip if line =~ /^ *#--/
-      if state == :copy
-        content << remove_solution(line) << "\n"
+      state = :copy
+      lines.each do |line|
+        state = :skip if line =~ /^ *#--/
+        if state == :copy
+          content << remove_solution(line) << "\n"
+        end
+        state = :copy if line =~ /^ *#\+\+/
       end
-      state = :copy if line =~ /^ *#\+\+/
+    else
+      content = eval(template)
     end
 
     File.write(outfile, content)
+  end
+
+  def self.define(name, &block)
+    Koans::DSL::Koan.new(name, &block).render
   end
 
 end
