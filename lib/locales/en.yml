@@ -1,38 +1,6 @@
 ---
 en:
   tests:
-    nil:
-      class: Nil
-      filename: about_nil.rb
-
-      nil_is_an_object:
-        name: nil_is_an_object
-        hint: Unlike NULL in other languages
-
-      you_dont_get_null_pointer_errors:
-        name: you_dont_get_null_pointer_errors_when_calling_methods_on_nil
-        hint: |-
-          # What happens when you call a method that doesn't exist?. The
-              # following begin/rescue/end code block captures the exception and
-              # makes some assertions about it.
-        hint_2: What exception has been caught?
-        hint_3: |-
-          # What message was attached to the exception?
-                # (HINT: replace __ with part of the error message.)
-        some_method_nil_doesnt_know: some_method_nil_doesnt_know_about
-
-      nil_has_a_few_methods_defined:
-        name: nil_has_a_few_methods_defined_on_it
-        hint: |-
-          # THINK ABOUT IT:
-              #
-              # Is it better to use
-              #    obj.nil?
-              # or
-              #    obj == nil
-              # ?
-              # Why?
-
     objects:
       class: Objects
       filename: about_objects.rb

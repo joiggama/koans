@@ -40,10 +40,14 @@ module Koans
         unformatted.each do |line|
           extra_padding = count_leading_spaces(line) - left_padding
           formatted << case
+                       when line == "\n"
+                         line.strip
                        when extra_padding.zero?
                          (" " * (left_padding - 2)) << line.strip
+                       when extra_padding < 0
+                         (" " * (left_padding)) << line.strip
                        when extra_padding > 0
-                         (" " * (left_padding + extra_padding)) << line.strip
+                         (" " * (left_padding + extra_padding - 2)) << line.strip
                        end
         end
 
