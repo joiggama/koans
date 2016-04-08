@@ -1,5 +1,6 @@
 require "erb"
 require "i18n"
+require "koans/dsl"
 require "koans/neo"
 require "koans/version"
 

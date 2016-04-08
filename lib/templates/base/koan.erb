@@ -1,0 +1,12 @@
+class <%= I18n.t("class_prefix") %><%= translate(:class) %> < Neo::Koan
+<%- tests.each do |test| -%>
+
+  <%- if test.has?(:description) -%>
+  # <%= test.translate(:description) %>
+  <%- end -%>
+  def <%= I18n.t("test_prefix") %>_<%= test.translate(:name) %>
+    <%= test.source %>
+  end
+<%- end -%>
+
+end
