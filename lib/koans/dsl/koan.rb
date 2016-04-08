@@ -1,7 +1,7 @@
 module Koans
   module DSL
-
     class Koan
+
       TEMPLATE = File.read(File.expand_path("../../../templates/base/koan.erb", __FILE__))
 
       attr_reader :name, :tests
@@ -25,6 +25,5 @@ module Koans
       end
 
     end
-
   end
 end

@@ -1,7 +1,7 @@
 # Method name replacement.
 class Object
 
-  def ____(method=nil)
+  def ____(method = nil)
     if method
       self.send(method)
     end

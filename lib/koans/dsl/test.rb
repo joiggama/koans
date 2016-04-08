@@ -25,6 +25,10 @@ module Koans
 
       private
 
+      def count_leading_spaces(line)
+        line[/\A */].length
+      end
+
       def format(content)
         return content if content.empty?
 
@@ -44,10 +48,6 @@ module Koans
         end
 
         formatted.join("\n")
-      end
-
-      def count_leading_spaces(line)
-        line[/\A */].length
       end
 
     end

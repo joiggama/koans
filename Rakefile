@@ -5,8 +5,9 @@ task :default do
   Rake::Task["koans:run"].invoke
 end
 
+task del: "koans:clobber"
 task gen: "koans:generate"
-task regen: "koans:regenerate"
+task reg: "koans:regenerate"
 task run: "koans:run"
 
 namespace :gem do
@@ -14,5 +15,5 @@ namespace :gem do
 end
 
 namespace :koans do
-  Dir.glob("lib/tasks/*.rake").each { |r| load r}
+  Dir.glob("lib/tasks/*.rake").each { |r| load r }
 end
