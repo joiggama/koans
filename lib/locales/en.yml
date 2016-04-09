@@ -1,34 +1,6 @@
 ---
 en:
   tests:
-    objects:
-      class: Objects
-      filename: about_objects.rb
-
-      everything_is_an_object:
-        name: everything_is_an_object
-        string: string
-      objects_can_be_converted_to_strings:
-        name: objects_can_be_converted_to_strings
-      objects_can_be_inspected:
-        name: objects_can_be_inspected
-      every_object_has_an_id:
-        name: every_object_has_an_id
-        object: &object object
-      every_object_has_different_id:
-        name: every_object_has_different_id
-        object: *object
-        another_object: another_object
-      small_integers_have_fixed_ids:
-        name: small_integers_have_fixed_ids
-        hint: |-
-          # THINK ABOUT IT:
-              # What pattern do the object IDs for small integers follow?
-      clone_creates_a_different_object:
-        name: clone_creates_a_different_object
-        object: *object
-        copy: copy
-
     arrays:
       class: Arrays
       filename: about_arrays.rb
