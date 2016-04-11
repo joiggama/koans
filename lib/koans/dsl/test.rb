@@ -23,6 +23,8 @@ module Koans
         I18n.t("tests.#{@koan}.#{@name}.#{key}")
       end
 
+      alias t translate
+
       private
 
       def count_leading_spaces(line)
