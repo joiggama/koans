@@ -1,4 +1,4 @@
-define "asserts" do
+Koans.define "asserts" do
 
   test "assert_truth" do
     source <<-this

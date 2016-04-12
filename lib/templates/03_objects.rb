@@ -1,4 +1,4 @@
-define "objects" do
+Koans.define "objects" do
 
   test "everything_is_an_object" do
     source <<-this

@@ -1,4 +1,4 @@
-define "arrays" do
+Koans.define "arrays" do
 
   test "creating_arrays" do
     source <<-this

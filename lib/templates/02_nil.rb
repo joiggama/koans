@@ -1,4 +1,4 @@
-define "nil" do
+Koans.define "nil" do
 
   test "nil_is_an_object" do
     source <<-this
