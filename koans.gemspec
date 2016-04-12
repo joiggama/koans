@@ -7,22 +7,12 @@ Gem::Specification.new do |spec|
   spec.name          = "koans"
   spec.version       = Koans::VERSION
   spec.authors       = ["Ignacio Galindo"]
-  spec.email         = ["joiggama+foss@gmail.com"]
-  spec.licenses      = ["CC-BY-SA-3.0"]
+  spec.email         = ["joiggama@gmail.com"]
+  spec.licenses      = ["CC-BY-NC-SA-4.0"]
 
   spec.summary       = %q{ The legendary ruby koans. }
-  #spec.description   = %q{TODO: Write a longer description or delete this line.}
-  #spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = ""
 
-  # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
-  # delete this section to allow pushing this gem to any host.
-  #if spec.respond_to?(:metadata)
-    #spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
-  #else
-    #raise "RubyGems 2.0 or newer is required to protect against public gem pushes."
-  #end
-
-  #spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
   spec.files =       []
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
