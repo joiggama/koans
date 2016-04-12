@@ -1,0 +1,64 @@
+---
+en:
+  tests:
+    array_assignment:
+      class: ArrayAssignment
+      filename: about_array_assignment.rb
+
+      non_parallel_assignment:
+        name: non_parallel_assignment
+        names: names
+        elements:
+          - John
+          - Smith
+
+      parallel_assignments:
+        name: parallel_assignments
+        first_name: first_name
+        last_name: last_name
+        names:
+          - John
+          - Smith
+
+      parallel_assignments_with_extra_values:
+        name: parallel_assignments_with_extra_values
+        first_name: first_name
+        last_name: last_name
+        names:
+          - John
+          - Smith
+          - III
+
+      parallel_assignments_with_splat_operator:
+        name: parallel_assignments_with_splat_operator
+        first_name: first_name
+        last_name: last_name
+        names:
+          - John
+          - Smith
+          - III
+
+      parallel_assignments_with_too_few_variables:
+        name: parallel_assignments_with_too_few_variables
+        first_name: first_name
+        last_name: last_name
+        names:
+          - Cher
+
+      parallel_assignments_with_subarrays:
+        name: parallel_assignments_with_subarrays
+        first_name: first_name
+        last_name: last_name
+        names:
+          - Willie
+          - Rae
+          -
+            - Johnson
+
+      swapping_with_parallel_assignment:
+        name: swapping_with_parallel_assignment
+        first_name: first_name
+        last_name: last_name
+        names:
+          - Roy
+          - Rob

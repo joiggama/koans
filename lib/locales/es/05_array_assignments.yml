@@ -1,0 +1,64 @@
+---
+es:
+  tests:
+    array_assignment:
+      class: AsignaciónDeArreglo
+      filename: acerca_de_asignaciones_de_arreglo.rb
+
+      non_parallel_assignment:
+        name: asignacion_lineal
+        names: nombres
+        elements:
+          - Saúl
+          - Hernández
+
+      parallel_assignments:
+        name: asignación_paralela
+        first_name: nombre
+        last_name: apellido
+        names:
+          - Saúl
+          - Hernández
+
+      parallel_assignments_with_extra_values:
+        name: asignación_paralela_con_valores_extras
+        first_name: nombre
+        last_name: apellido
+        names:
+          - Saúl
+          - Hernández
+          - Estrada
+
+      parallel_assignments_with_splat_operator:
+        name: asignación_paralela_con_operador_splat
+        first_name: nombre
+        last_name: apellido
+        names:
+          - Saúl
+          - Hernández
+          - Estrada
+
+      parallel_assignments_with_too_few_variables:
+        name: asignación_paralela_con_muy_pocas_variables
+        first_name: nombre
+        last_name: apellido
+        names:
+          - Chavela
+
+      parallel_assignments_with_subarrays:
+        name: asignación_paralela_con_sub_arreglos
+        first_name: nombre
+        last_name: apellido
+        names:
+          - Silvia
+          - Pinal
+          -
+            - Hidalgo
+
+      swapping_with_parallel_assignment:
+        name: intercambio_con_asignación_paralela
+        first_name: nombre
+        last_name: apellido
+        names:
+          - Rogelio
+          - Roberto
